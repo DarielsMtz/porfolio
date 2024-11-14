@@ -1,0 +1,26 @@
+<section class="flex flex-col min-h-screen px-2 align-center fade-in">
+  <!-- <div
+    class="max-w-4xl w-full p-10 mx-auto my-20 bg-white border-2 border-gray-400 rounded-3xl h-[1000px] sticky-element">
+  </div> -->
+
+  <!-- Contenedor padre con altura adicional -->
+  <div
+    class="max-w-4xl mx-auto my-20 w-full motion-translate-x-in-[0%] motion-translate-y-in-[50%] motion-duration-[1.13s] animation-view(30%)">
+    <div
+      class="p-10 rounded-3xl h-[1000px] backdrop-blur-[1px] backdrop-saturate-[98%] bg-[#ffffff] bg-opacity-10 border border-opacity-20 border-[#ffffff] shadow-lg">
+      <slot name="titulo" />
+      <slot name="cuerpo" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .parent-container {
+    height: 1500px; /* Asegura suficiente espacio para el scroll */
+  }
+  .sticky-element {
+    position: sticky;
+    top: 10%; /* Espacio desde la parte superior */
+    z-index: 10;
+  }
+</style>

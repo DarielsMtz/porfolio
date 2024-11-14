@@ -1,0 +1,38 @@
+---
+import SocialBtn from "./Button/SocialBtn.astro";
+import ShapeBlur from "./Shapes/ShapesBlur.astro";
+
+interface Props {
+  description: string;
+}
+
+const { description } = Astro.props;
+---
+
+<div class="bg-transparent m-auto">
+  <div class="relative isolate px-6 lg:px-8">
+    <ShapeBlur />
+    <div
+      class="mx-auto max-w-5xl pt-32 pb-16 motion-scale-in-[0.8] motion-opacity-in-[0%] motion-blur-in-[0px] motion-duration-[0.00s]/opacity motion-delay-[0.75s]/blur motion-ease-spring-bouncy">
+      <div
+        class="mb-10 flex w-full flex-col items-end justify-between gap-20 xl:mb-28 xl:flex-row">
+        <div class="flex w-full flex-col gap-5">
+          <div class="flex items-center gap-4">
+            <div class="h-[3px] w-8 bg-black/90 md:w-10"></div>
+            <span class="sm:text-lg">Hola, soy Dariels Martinez</span>
+          </div>
+          <h1 class="font-serif text-5xl py-3 sm:text-[65px] sm:leading-tight">
+            Desarrollador <br /> de Aplicaciones Web <br />
+            <span class="h-7"></span>
+          </h1>
+        </div>
+        <div class="flex w-full flex-col gap-5">
+          <div class="h-[3px] w-8 bg-black/90 md:w-10"></div>
+          <p class="max-w-lg sm:text-lg">
+            {description}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
