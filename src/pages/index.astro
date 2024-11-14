@@ -10,7 +10,8 @@ import Asides from "../components/Shapes/Asides.astro";
     description="Entusiasta de 22 años de Honduras 🇭🇳, especializado en Desarrollo de Aplicaciones Web. Experiencia en proyectos digitales y comprometido con la innovación. Busco oportunidades para crecer y colaborar en el ámbito tecnológico."
   />
 
-  <h2 class="mb-14 mt-3 pt-32 text-5xl text-black/90 font-bold text-center">
+  <h2
+    class="mb-14 mt-3 pt-32 text-5xl font-serif text-black/90 font-semibold text-center">
     Proyectos
   </h2>
 
@@ -48,6 +49,107 @@ import Asides from "../components/Shapes/Asides.astro";
       </div>
     </Card>
 
-    <Asides />
+    <Card
+      title="Probio Iberica S.L."
+      body="Es una empresa creada con la visión de comercializar suplementos nutricionales innovadores 100% naturales para el mercado de mascotas en Latinoamérica."
+      image="https://darielsmtz.netlify.app/img/desktop/proyecto_2.webp"
+      urlDemo="https://www.probioiberica.es/"
+      urlCode="">
+      <div
+        slot="tecnologias"
+        class="flex flex-wrap justify-end gap-1 [&>span]:bg-blue-50 [&>span]:text-blue-700 [&>span]:ring-blue-500/20 [&>span]:"
+        data-astro-cid-3bkgdtqq="">
+        <span
+          class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset">
+          HTML
+        </span>
+        <span
+          class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset">
+          CSS
+        </span>
+        <span
+          class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset">
+          JavaScript
+        </span>
+        <span
+          class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset">
+          MySQL
+        </span>
+        <span
+          class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset">
+          PHP
+        </span>
+      </div>
+    </Card>
   </section>
+
+  <!-- Experience -->
+  <section
+    id="experience"
+    class="relative flex flex-col items-center justify-center py-36 mt-20">
+    <img
+      src="/figure-2.svg"
+      alt="figure"
+      class="absolute bottom-80 left-0 right-0 -z-10 h-[440px] w-[360px] blur-[180px] md:bottom-40 md:left-auto md:right-20 md:blur-[200px]"
+    />
+    <div class="flex max-w-2xl flex-col items-center gap-12">
+      <h2 class="w-full text-center font-serif text-5xl sm:text-6xl">
+        Experiencia
+      </h2>
+      <article class="flex w-full flex-col gap-2">
+        <h3 class="font-bold">Desarrollo web - Probio Iberica S.L.</h3>
+        <span class="text-sm font-medium italic text-gray-800">
+          Nov 2021 - Actualidad (<i>Mantenimiento</i>)
+        </span>
+        <ul class="mt-4 flex list-disc flex-col gap-3">
+          <li class="ml-5">
+            Creacion de un sitio web mediante la plataforma WordPress.
+          </li>
+          <li class="ml-5">
+            Elaboracion y ejecucion de estratejia de marketing digital y
+            presencia en redes sociales.
+          </li>
+          <li class="ml-5">
+            Configuracion, asistencia tencnica y administracion de un sistema de
+            gestion de facturacion (Holded) .
+          </li>
+        </ul>
+      </article>
+
+      <!-- Education -->
+      <div class="flex w-full flex-col gap-4 mt-32">
+        <h2 class="w-full text-center font-serif text-5xl sm:text-6xl">
+          Educación
+        </h2>
+        <ul class="flex flex-wrap gap-6 sm:gap-14">
+          <li class="flex gap-1">
+            <span class="-mt-[2px] text-xl">•</span>
+            <div class="flex flex-col">
+              <h4 class="font-bold">Bachillerato en Informatica</h4>
+              <span class="mt-1 text-sm font-medium"
+                >Intituto LCCR (<i>Honduras</i>)</span
+              >
+              <span class="text-sm italic text-gray-500"
+                >Febrero 2022 - Noviembre 2021</span
+              >
+            </div>
+          </li>
+          <li class="flex gap-1">
+            <span class="-mt-[2px] text-xl">•</span>
+            <div class="flex flex-col">
+              <h4 class="font-bold">Ciclo Formativo de Grado Superior</h4>
+              <span class="mt-1 text-sm font-medium"
+                >Grupo Fleming - Edib (<i>Mallorca, España</i>)</span
+              >
+              <span class="text-sm italic text-gray-500"
+                >Octubre 2022 - Junio 2024</span
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <Asides />
 </Layout>

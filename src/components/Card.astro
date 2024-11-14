@@ -10,8 +10,24 @@ interface Props {
 const { title, body, image, urlDemo, urlCode } = Astro.props;
 ---
 
+<script>
+  // Selecciona todos los elementos con la clase .github-btn
+  const githubButtons = document.querySelectorAll(".github-btn");
+
+  // Verifica que exista al menos un segundo botón y ocúltalo si no tiene href
+  if (githubButtons[1]) {
+    const secondButtonHref = githubButtons[1].getAttribute("href");
+    console.log(secondButtonHref); // Verificar en consola el valor de href en la segunda carta
+
+    // Oculta solo el segundo botón si href está vacío o nulo
+    if (!secondButtonHref || secondButtonHref.trim() === "") {
+      (githubButtons[1] as HTMLElement).style.display = "none";
+    }
+  }
+</script>
+
 <div
-  class="relative flex flex-col w-4/5 my-6 rounded-lg motion-scale-in-[0.8] motion-opacity-in-[0%] motion-blur-in-[0px] motion-duration-[0.00s]/opacity motion-delay-[0.75s]/blur motion-ease-spring-bouncy">
+  class="relative flex flex-col w-4/5 my-8 rounded-lg motion-scale-in-[0.8] motion-opacity-in-[0%] motion-blur-in-[0px] motion-duration-[0.00s]/opacity motion-delay-[0.75s]/blur motion-ease-spring-bouncy">
   <div class="">
     <h3 class="mb-2 text-black/90 text-3xl font-semibold">
       {title}
