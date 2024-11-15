@@ -4,6 +4,7 @@ import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
 import Asides from "../components/Shapes/Asides.astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="Dariels Martinez | Desarrollador de Aplicaciones Web">
@@ -17,7 +18,15 @@ import SpeedInsights from "@vercel/speed-insights/astro";
     Proyectos
   </h2>
 
-  <section class="max-w-4xl flex flex-col items-center gap-6 mx-auto">
+  <section class="max-w-4xl flex flex-col items-center gap-6 mx-auto relative">
+    <Image
+      src="/public/figure-3.svg"
+      alt="figure"
+      class="absolute bottom-80 left-2 right-0 -z-10 h-[440px] w-[360px] blur-[250px] opacity-35 md:top-0 md:left-0 md:right-auto md:blur-[200px]"
+      format="webp"
+      width={360}
+      height={440}
+    />
     <Card
       title="KeyMaster"
       body="KeyMaster es una aplicación web diseñada para generar contraseñas seguras y únicas. Utiliza tecnologías modernas para ofrecer una interfaz de usuario intuitiva y fácil de usar."
@@ -50,7 +59,6 @@ import SpeedInsights from "@vercel/speed-insights/astro";
         </span>
       </div>
     </Card>
-
     <Card
       title="Probio Iberica S.L."
       body="Es una empresa creada con la visión de comercializar suplementos nutricionales innovadores 100% naturales para el mercado de mascotas en Latinoamérica."
@@ -59,27 +67,19 @@ import SpeedInsights from "@vercel/speed-insights/astro";
       urlCode="">
       <div
         slot="tecnologias"
-        class="flex flex-wrap justify-end gap-1 [&>span]:bg-blue-50 [&>span]:text-blue-700 [&>span]:ring-blue-500/20 [&>span]:"
+        class="flex flex-wrap justify-end gap-1 [&>span]:bg-green-50 [&>span]:text-green-700 [&>span]:ring-green-500/20 [&>span]:"
         data-astro-cid-3bkgdtqq="">
         <span
           class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset">
-          HTML
+          WordPress
         </span>
         <span
           class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset">
-          CSS
+          Elementor
         </span>
         <span
           class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset">
-          JavaScript
-        </span>
-        <span
-          class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset">
-          MySQL
-        </span>
-        <span
-          class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset">
-          PHP
+          WooCommerce
         </span>
       </div>
     </Card>
@@ -88,11 +88,14 @@ import SpeedInsights from "@vercel/speed-insights/astro";
   <!-- Experience -->
   <section
     id="experience"
-    class="relative flex flex-col items-center justify-center py-36 sm:py-16 mt-20 px-16 ⁓space-y-2/16">
-    <img
-      src="/figure-2.svg"
+    class="relative flex flex-col items-center justify-center py-36 sm:py-16 mt-20 px-5 ⁓space-y-2/16">
+    <Image
+      src="/public/figure-2.svg"
       alt="figure"
-      class="absolute bottom-80 left-0 right-0 -z-10 h-[440px] w-[360px] blur-[180px] md:bottom-40 md:left-auto md:right-20 md:blur-[200px]"
+      class="absolute bottom-80 left-0 right-0 -z-10 h-[440px] w-[360px] blur-[180px] md:bottom-0 md:left-auto md:right-20 md:blur-[200px]"
+      format="webp"
+      width={360}
+      height={440}
     />
     <div class="flex max-w-2xl flex-col items-center gap-12">
       <h2 class="w-full text-center font-serif text-5xl sm:text-6xl">
@@ -123,7 +126,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
         <h2 class="w-full text-center font-serif text-5xl sm:text-6xl">
           Educación
         </h2>
-        <ul class="flex flex-wrap gap-6 sm:gap-14">
+        <ul class="flex flex-wrap gap-6 pt-5 justify-between sm:gap-14">
           <li class="flex gap-1">
             <span class="-mt-[2px] text-xl">•</span>
             <div class="flex flex-col">
