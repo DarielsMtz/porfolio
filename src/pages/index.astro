@@ -3,9 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
 import Asides from "../components/Shapes/Asides.astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
 <Layout title="Dariels Martinez | Desarrollador de Aplicaciones Web">
+  <SpeedInsights />
   <Hero
     description="Entusiasta de 22 años de Honduras 🇭🇳, especializado en Desarrollo de Aplicaciones Web. Experiencia en proyectos digitales y comprometido con la innovación. Busco oportunidades para crecer y colaborar en el ámbito tecnológico."
   />
@@ -86,7 +88,7 @@ import Asides from "../components/Shapes/Asides.astro";
   <!-- Experience -->
   <section
     id="experience"
-    class="relative flex flex-col items-center justify-center py-36 mt-20">
+    class="relative flex flex-col items-center justify-center py-36 sm:py-16 mt-20 px-16 ⁓space-y-2/16">
     <img
       src="/figure-2.svg"
       alt="figure"
@@ -150,6 +152,8 @@ import Asides from "../components/Shapes/Asides.astro";
       </div>
     </div>
   </section>
+
+  <section class="h-10"></section>
 
   <Asides />
 </Layout>
