@@ -5,6 +5,7 @@ import Hero from "../components/Hero.astro";
 import Asides from "../components/Shapes/Asides.astro";
 
 import { Image } from "astro:assets";
+import Folder from "../components/Shapes/Folder.astro";
 ---
 
 <style>
@@ -41,7 +42,7 @@ import { Image } from "astro:assets";
         urlCode="https://github.com/darielsmtz/darielsmtz.github.io">
         <section
           slot="tecnologias"
-          class="containerIcons flex items-center gap-3">
+          class="flex items-center gap-3 [&>span]:flex [&>span]:items-center [&>span]:text-white [&>span]:py-2 [&>span]:px-1 [&>span>svg]:w-6 [&>span>svg]:h-6">
           <span title="HTML" aria-label="HTML">
             <svg viewBox="0 0 452 520">
               <path fill="#e34f26" d="M41 460L0 0h451l-41 460-185 52"></path>
@@ -111,7 +112,7 @@ import { Image } from "astro:assets";
         urlDemo="https://www.probioiberica.es/"
         urlCode="">
         <section
-          class="containerIcons flex items-center gap-3"
+          class="flex items-center gap-3 [&>span]:flex [&>span]:items-center [&>span]:text-white [&>span]:py-2 [&>span]:px-1 [&>span>svg]:w-6 [&>span>svg]:h-6"
           slot="tecnologias">
           <span title="WordPress" aria-label="WordPress">
             <svg viewBox="0 0 122.52 122.523" width="512" height="512">
@@ -167,7 +168,7 @@ import { Image } from "astro:assets";
     <!-- Experience -->
     <section
       id="experience"
-      class="relative flex flex-col items-center justify-center py-20 sm:py-16 mt-20 px-5 ⁓space-y-2/16">
+      class="relative flex flex-col items-center justify-center py-20 sm:py-16 mt-20 px-5 ⁓space-y-2/16 motion-scale-in-[0.8] motion-opacity-in-[0%] motion-blur-in-[0px] motion-duration-[0.00s]/opacity motion-delay-[0.75s]/blur motion-ease-spring-bouncy">
       <Image
         src="/public/figure-2.svg"
         alt="figure"
@@ -186,7 +187,7 @@ import { Image } from "astro:assets";
             Noviembre 2021 - Actualidad (<i>Mantenimiento</i>)
           </span>
           <ul
-            class="mt-4 flex list-disc flex-col gap-3 [&>li]:text-sm [&>li]:pb-2">
+            class="mt-4 flex list-disc flex-col gap-3 [&>li]:pb-2 [&>li]:text-black/90 [&>li]:leading-normal [&>li]:font-serif [&>li]:font-light">
             <li>
               <b>Desarrollo y diseño de un sitio web</b> utilizando la plataforma
               WordPress, implementando plugins como Elementor para la construcción
@@ -203,8 +204,8 @@ import { Image } from "astro:assets";
             <li>
               <b>
                 Configuración, asistencia técnica y administración de un sistema
-                de gestión de facturación (Holded),</b
-              >
+                de gestión de facturación (Holded),
+              </b>
               incluyendo la personalización de funcionalidades para adaptarse a las
               necesidades específicas de la empresa, la resolución de problemas técnicos
               y la capacitación del personal en el uso eficiente del sistema para
@@ -214,7 +215,8 @@ import { Image } from "astro:assets";
         </article>
 
         <!-- Education -->
-        <div class="flex w-full flex-col gap-4 mt-32">
+        <div
+          class="flex w-full flex-col gap-4 mt-32 motion-scale-in-[0.8] motion-opacity-in-[0%] motion-blur-in-[0px] motion-duration-[0.00s]/opacity motion-delay-[0.75s]/blur motion-ease-spring-bouncy">
           <h2 class="w-full text-center font-sans text-5xl sm:text-6xl">
             Educación
           </h2>
@@ -381,27 +383,40 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </section>
+
+    <!-- About Me -->
+    <section
+      class="flex flex-col items-center justify-center gap-4 my-32 max-w-5xl m-auto px-10 motion-scale-in-[0.8] motion-opacity-in-[0%] motion-blur-in-[0px] motion-duration-[0.00s]/opacity motion-delay-[0.75s]/blur motion-ease-spring-bouncy">
+      <h2 class="text-5xl">Sobre Mi</h2>
+      <article
+        class="grid grid-cols-2 gap-10 justify-end items-center justify-items-end pt-8 m-auto max-w-2xl max-sm:grid-cols-1 max-sm:px-10 max-sm:items-center">
+        <section
+          class="[&>p]:pb-3 [&>p]:text-black/90 [&>p]:leading-normal [&>p]:font-serif [&>p]:font-light">
+          <p>
+            A lo largo de los años, he trabajado en diversos proyectos que han
+            potenciado mi creatividad y ampliado mis conocimientos en el
+            desarrollo web y la creación digital. Estos proyectos no solo han
+            fortalecido mi habilidad técnica, sino también mi enfoque hacia la
+            innovación y la solución de problemas.
+          </p>
+          <p>
+            Me encanta enfrentar nuevos desafíos y siempre estoy buscando
+            oportunidades para aplicar mis habilidades, mientras sigo
+            aprendiendo y creciendo en este campo en constante evolución.
+          </p>
+        </section>
+        <article class="flex justify-center items-center">
+          <Image
+            src="/public/foto_perfil.webp"
+            alt="Dariels Martinez"
+            class="w-[70%] rounded-xl origin-center rotate-[5deg] hover:rotate-0 hover:transition rotate 0.3s ease-in-out max-sm:w-sm"
+            format="webp"
+            width={400}
+            height={400}
+          />
+        </article>
+      </article>
+    </section>
   </main>
-  <section class="h-10"></section>
   <Asides />
 </Layout>
-
-<style>
-  .containerIcons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    & span {
-      display: flex;
-      align-items: center;
-      color: var(--whiteColor);
-      padding: 10px 5px;
-
-      & svg {
-        width: 25px;
-        height: 25px;
-      }
-    }
-  }
-</style>
