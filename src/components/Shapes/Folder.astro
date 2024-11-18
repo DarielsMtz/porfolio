@@ -1,0 +1,77 @@
+<div class="main">
+  <div class="card" id="c1"></div>
+  <div class="card" id="c2"></div>
+  <div class="card" id="c3"></div>
+  <div class="card" id="c4"></div>
+</div>
+
+<style>
+  .main {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    place-items: center;
+  }
+  .card {
+    position: absolute;
+    width: 200px;
+    height: 161.79px;
+    border-radius: 10%;
+    /* background: #b4b4b4; */
+    transition: 0.3s ease-in-out;
+    background: url("/public/folder.svg") no-repeat center/cover;
+    cursor: pointer;
+  }
+
+  #c1 {
+    background: url("/public/folders/Folder_1.svg") no-repeat center/cover;
+  }
+
+  #c2 {
+    background: url("/public/folders/Folder_2.svg") no-repeat center/cover;
+  }
+
+  #c3 {
+    background: url("/public/folders/Folder_3.svg") no-repeat center/cover;
+  }
+
+  #c4 {
+    background: url("/public/folders/Folder_1.svg") no-repeat center/cover;
+  }
+
+  .main:hover #c1 {
+    transform: translateX(-100px) rotate(-40deg);
+  }
+
+  .main:hover #c2 {
+    transform: translateX(-50px) rotate(-30deg);
+  }
+
+  .main:hover #c3 {
+    transform: translateX(0) rotate(-20deg);
+  }
+
+  .main:hover #c4 {
+    transform: translateX(50px) rotate(-10deg);
+  }
+
+  #c1:hover {
+    transform: translateX(-150px) rotate(0deg) !important;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  #c2:hover {
+    transform: translateX(-100px) rotate(0deg) !important;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  #c3:hover {
+    transform: translateX(-50px) rotate(0deg) !important;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  #c4:hover {
+    transform: translateX(50px) rotate(0deg) !important;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+</style>
