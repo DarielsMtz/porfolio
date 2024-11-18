@@ -108,7 +108,9 @@ import { Image } from "astro:assets";
       image="https://darielsmtz.netlify.app/img/desktop/proyecto_2.webp"
       urlDemo="https://www.probioiberica.es/"
       urlCode="">
-      <section class="containerIcons" slot="tecnologias">
+      <section
+        class="containerIcons flex items-center gap-3"
+        slot="tecnologias">
         <span title="WordPress" aria-label="WordPress">
           <svg viewBox="0 0 122.52 122.523" width="512" height="512">
             <g fill="#21759b">
@@ -163,7 +165,7 @@ import { Image } from "astro:assets";
   <!-- Experience -->
   <section
     id="experience"
-    class="relative flex flex-col items-center justify-center py-36 sm:py-16 mt-20 px-5 ⁓space-y-2/16">
+    class="relative flex flex-col items-center justify-center py-20 sm:py-16 mt-20 px-5 ⁓space-y-2/16">
     <Image
       src="/public/figure-2.svg"
       alt="figure"
@@ -173,10 +175,8 @@ import { Image } from "astro:assets";
       height={440}
     />
     <div class="flex max-w-2xl flex-col items-center gap-12">
-      <h2 class="w-full text-center font-serif text-5xl sm:text-6xl">
-        Experiencia
-      </h2>
-      <article class="flex w-full flex-col gap-2">
+      <h2 class="w-full text-center font-serif text-5xl">Experiencia</h2>
+      <article class="flex w-full flex-col gap-2 px-5">
         <h3 class="font-bold text-md uppercase">
           Desarrollo web - Probio Iberica S.L.
         </h3>
@@ -248,9 +248,7 @@ import { Image } from "astro:assets";
             <span class="-mt-[2px] text-xl">•</span>
             <div class="flex flex-col">
               <article class="flex">
-                <h4 class="font-bold">
-                  Curso de introducción al desarrollo web: HTML y CSS
-                </h4>
+                <h4 class="font-bold">Introducción al desarrollo web</h4>
                 <a
                   class="mx-5 flex gap-2 italic text-gray-500"
                   href="https://skillshop.exceedlms.com/student/award/uzXt8BqhNex9K235RxsHsnQX"
