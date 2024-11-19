@@ -3,9 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
 import Asides from "../components/Shapes/Asides.astro";
-
 import { Image } from "astro:assets";
-import Folder from "../components/Shapes/Folder.astro";
+import SocialMedia from "../components/SocialMedia.astro";
 ---
 
 <style>
@@ -18,7 +17,7 @@ import Folder from "../components/Shapes/Folder.astro";
 <Layout title="Dariels Martinez | Desarrollador de Aplicaciones Web">
   <main>
     <Hero
-      description="Entusiasta de 22 años de Honduras 🇭🇳. Experiencia en proyectos digitales y comprometido con la innovación. Buscando oportunidades para crecer y colaborar en el ámbito del desarrollo web."
+      description="Entusiasta de 23 años de Honduras 🇭🇳. Experiencia en proyectos digitales y comprometido con la innovación. Buscando oportunidades para crecer y colaborar en el ámbito del desarrollo web."
     />
     <h2
       class="mb-14 mt-3 pt-32 text-5xl font-serif text-black/90 sm:text-6xl text-center">
@@ -168,7 +167,7 @@ import Folder from "../components/Shapes/Folder.astro";
     <!-- Experience -->
     <section
       id="experience"
-      class="relative flex flex-col items-center justify-center py-20 sm:py-16 mt-20 px-5 ⁓space-y-2/16 motion-scale-in-[0.8] motion-opacity-in-[0%] motion-blur-in-[0px] motion-duration-[0.00s]/opacity motion-delay-[0.75s]/blur motion-ease-spring-bouncy">
+      class="relative flex flex-col items-center justify-center py-20 sm:py-16 mt-20 px-10 motion-scale-in-[0.8] motion-opacity-in-[0%] motion-blur-in-[0px] motion-duration-[0.00s]/opacity motion-delay-[0.75s]/blur motion-ease-spring-bouncy">
       <Image
         src="/figure-2.svg"
         alt="figure"
@@ -177,7 +176,7 @@ import Folder from "../components/Shapes/Folder.astro";
         width={360}
         height={440}
       />
-      <div class="flex max-w-2xl flex-col items-center gap-12">
+      <div class="flex max-w-3xl flex-col items-center gap-12">
         <h2 class="w-full text-center font-serif text-5xl">Experiencia</h2>
         <article class="flex w-full flex-col gap-2 px-5">
           <h3 class="font-bold text-md uppercase">
@@ -386,10 +385,10 @@ import Folder from "../components/Shapes/Folder.astro";
 
     <!-- About Me -->
     <section
-      class="flex flex-col items-center justify-center gap-4 mt-32 pb-20 max-w-5xl m-auto px-10 motion-scale-in-[0.8] motion-opacity-in-[0%] motion-blur-in-[0px] motion-duration-[0.00s]/opacity motion-delay-[0.75s]/blur motion-ease-spring-bouncy">
+      class="flex flex-col items-center justify-center gap-4 mt-32 pb-20 max-w-6xl m-auto px-10 motion-scale-in-[0.8] motion-opacity-in-[0%] motion-blur-in-[0px] motion-duration-[0.00s]/opacity motion-delay-[0.75s]/blur motion-ease-spring-bouncy">
       <h2 class="text-5xl">Sobre Mi</h2>
       <article
-        class="grid grid-cols-2 gap-10 justify-end items-center justify-items-end pt-8 m-auto max-w-2xl max-sm:grid-cols-1 max-sm:px-10 max-sm:items-center">
+        class="grid grid-cols-2 gap-10 justify-end items-center justify-items-end pt-8 m-auto max-w-3xl max-sm:grid-cols-1 max-sm:items-center">
         <section
           class="[&>p]:pb-3 [&>p]:text-black/90 [&>p]:leading-normal [&>p]:font-serif [&>p]:font-light">
           <p>
@@ -405,15 +404,16 @@ import Folder from "../components/Shapes/Folder.astro";
             aprendiendo y creciendo en este campo en constante evolución.
           </p>
         </section>
-        <article class="flex justify-center items-center">
+        <article class="flex flex-col justify-center items-center">
           <Image
             src="/foto_perfil.webp"
             alt="Dariels Martinez"
-            class="w-[70%] rounded-xl origin-center rotate-[5deg] hover:rotate-0 hover:transition rotate 0.3s ease-in-out max-sm:w-sm"
+            class="w-[80%] rounded-xl max-sm:w-sm"
             format="webp"
             width={400}
             height={400}
           />
+          <SocialMedia />
         </article>
       </article>
     </section>
