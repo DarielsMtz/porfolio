@@ -56,12 +56,45 @@ const { title } = Astro.props;
       Courier New,
       monospace;
   }
+  body {
+    position: relative;
+    min-height: 100vh;
+    z-index: 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    z-index: -100;
+    background-image: url(/svg/header-gradient.svg),
+      url(/svg/footer-gradient.svg);
+    background-repeat: no-repeat;
+    background-position:
+      center top,
+      center bottom;
+    background-size: 1400px;
+  }
+
+  #texture {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -99;
+    width: 100%;
+    height: calc(200px + 100vh);
+    opacity: 0.25;
+    pointer-events: none;
+    transform: translateY(0px);
+    filter: contrast(120%) brightness(120%);
+  }
 
   @font-face {
     font-family: "Soria";
     src:
-      url("/public/font/soria-font-webfont.woff2") format("woff2"),
-      url("/public/font/soria-font-webfont.woff") format("woff");
+      url("/font/soria-font-webfont.woff2") format("woff2"),
+      url("/font/soria-font-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
