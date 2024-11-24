@@ -1,9 +1,10 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Hero from "../components/Hero.astro";
-import Asides from "../components/Shapes/Asides.astro";
 import { Image } from "astro:assets";
+import Asides from "../components/Shapes/Asides.astro";
+import Card from "../components/Card.astro";
+import Grafics from "../components/Shapes/Grafics.astro";
+import Hero from "../components/Hero.astro";
+import Layout from "../layouts/Layout.astro";
 import SocialMedia from "../components/SocialMedia.astro";
 ---
 
@@ -430,5 +431,6 @@ import SocialMedia from "../components/SocialMedia.astro";
       <rect width="100%" height="100%" filter="url(#noise)"></rect>
     </svg>
   </main>
+  <Grafics />
   <Asides />
 </Layout>
