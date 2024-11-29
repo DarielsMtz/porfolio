@@ -20,6 +20,8 @@ import SocialMedia from "../components/SocialMedia.astro";
     <Hero
       description="Entusiasta de 23 años de Honduras 🇭🇳. Experiencia en proyectos digitales y comprometido con la innovación. Buscando oportunidades para crecer y colaborar en el ámbito del desarrollo web."
     />
+
+    <!-- Proyects -->
     <h2
       class="mb-14 mt-3 pt-32 text-5xl font-serif text-black/90 sm:text-6xl text-center">
       Proyectos
@@ -29,6 +31,7 @@ import SocialMedia from "../components/SocialMedia.astro";
       <Image
         src="/figure-3.svg"
         alt="figure"
+        aria-details="Figura 3"
         class="absolute bottom-80 left-2 right-0 -z-10 h-[440px] w-[360px] blur-[250px] opacity-35 md:top-0 md:left-0 md:right-auto md:blur-[200px] animate-float"
         format="webp"
         width={360}
@@ -37,7 +40,7 @@ import SocialMedia from "../components/SocialMedia.astro";
       <Card
         title="KeyMaster"
         body="KeyMaster es una aplicación web diseñada para generar contraseñas seguras y únicas. Utiliza tecnologías modernas para ofrecer una interfaz de usuario intuitiva y fácil de usar."
-        image="https://darielsmtz.netlify.app/img/desktop/proyecto_1.webp"
+        image="/img/proyecto_1.webp"
         urlDemo="https://keymasters.glitch.me/"
         urlCode="https://github.com/DarielsMtz/KeyMaster">
         <section
@@ -108,7 +111,7 @@ import SocialMedia from "../components/SocialMedia.astro";
       <Card
         title="Probio Iberica S.L."
         body="Creación de un sitio web mediante la plataforma WordPress, donde se implemento los complementos o 'Plugins' de Elementor para la esctruccion de las distinta secciones del sitio web, y Woocommerce para gestion del catalogo de los productos."
-        image="https://darielsmtz.netlify.app/img/desktop/proyecto_2.webp"
+        image="/img/proyecto_2.webp"
         urlDemo="https://www.probioiberica.es/"
         urlCode="">
         <section
@@ -407,8 +410,10 @@ import SocialMedia from "../components/SocialMedia.astro";
         </section>
         <article class="flex flex-col justify-center items-center">
           <Image
-            src="/foto_perfil.webp"
+            src="/img/foto_perfil.webp"
             alt="Dariels Martinez"
+            title="Dariels Martinez"
+            aria-details="Foto de Dariels Martinez "
             class="w-[80%] rounded-xl max-sm:w-sm"
             format="webp"
             width={400}
